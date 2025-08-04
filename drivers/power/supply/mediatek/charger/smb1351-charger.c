@@ -1767,6 +1767,7 @@ DEFINE_SIMPLE_ATTRIBUTE(force_irq_ops, NULL, force_irq_set, "0x%02llx\n");
 
 void dump_regs(struct smb1351_charger *chip)
 {
+#if 0
 	int rc;
 	u8 reg;
 	u8 addr;
@@ -1802,6 +1803,7 @@ void dump_regs(struct smb1351_charger *chip)
 		else
 			pr_err("0x%02x = 0x%02x\n", addr, reg);
 	}
+#endif
 }
 
 static int smb1351_parse_dt(struct smb1351_charger *chip)
